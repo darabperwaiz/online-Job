@@ -1,0 +1,76 @@
+.bg{
+    color: rgb(25, 180, 17);
+}
+.container{
+    color:rgb(211, 194, 194);
+
+}
+main{
+    min-height: calc(100vh);
+}
+
+.list-group{
+    align-items: center;
+    align-content: center;
+    background-color: aqua;
+
+}
+#homeImage{
+    margin-left: 400px;
+    
+
+}
+#image_div{
+    width: 100px;
+}
+#headinfOfHome{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(9, 9, 9);
+    font-size: 40px;
+}
+
+.homehr hr{
+    color: rgb(0, 217, 255);
+  height: 5px;
+}
+.form-background{
+    background-color: none;
+}
+
+.heading{
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+
+}
+.form-label{
+    color:white;
+    font-weight: bold;
+
+  
+}
+
+.nav-color{
+    background-color:black;
+    
+}
+
+
+
+.nav-link{
+    color: aliceblue;
+}
+
+.hrForm hr{
+    color: antiquewhite;
+    height: 5px;
+}
+
+#job-p-nav-color{
+    background-color:black;
+    color: aliceblue;
+    
+}
+

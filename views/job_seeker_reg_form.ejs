@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Personal style -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Job Dhundo</title>
+
+</head>
+
+<body>
+    <%-include('./header.ejs')%>
+
+
+    
+
+    <!-- Form start from here -->
+    <main style="background-image: url(image/rpa-concept-with-blurry-hand-touching-screen.jpg); background-size: 100%;">
+        <div class="container ">
+            <div class="row no-gutter justify-content-center">
+                <div class="col-4 heading">
+                    <h3 style="font-size: 30px;">Job Seeker Registration Form</h3>
+                </div>
+            </div>
+            <div class="hrForm"><hr></div>
+            
+
+        </div>
+        <div class="container form-background">
+            <form  action="create_job_seeker" method="post" onsubmit="return validation()">
+                <div class="row justify-content-center">
+                    <div class="col-6 ">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                            <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name">
+                            <span id="name1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                            <input type="text" name="lname"class="form-control" id="ln" placeholder="Last Name">
+                            <span id="l" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Pnone No</label>
+                            <input type="text" name="phone" class="form-control" id="pn" placeholder="Pnone No">
+                            <span id="p" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="text" name="email" class="form-control" id="email" placeholder="Email address">
+                            <span id="em" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" id="pass" placeholder="Password">
+                            <span id="pas" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                            <input type="password" name="cpassword" class="form-control" id="pass1" placeholder="Confirm Password">
+                            <span id="pas" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                            <input type="text" name="cpassword" nclass="form-control" id="pass1" placeholder=" Confirm Password">
+                            <span id="pas1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div> -->
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Location</label>
+                            <input type="text" name="location" class="form-control" id="loca" placeholder="Location">
+                            <span id="loc1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Skill</label>
+                            <input type="text" name="skill" class="form-control" id="cn" placeholder="Skill">
+                            <span id="c" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label"> Experience</label>
+                            <input type="text"name="experience" class="form-control" id="he" placeholder=" Experience in years">
+                            <span id="h" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 form-group">
+                            <label for="exampleFormControlInput1" class="form-label">Highest Qualification</label>
+                            <input type="text" name="qualification" class="form-control" id="dn" placeholder="Highest Qualification">
+                            <span id="a" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-1">
+                        <button type="submit" name="userregister" value="User Register" class="btn btn-success">Submit</button>
+                    </div>
+                    <div class="col-md-1">
+                        <input class="btn btn-danger" type="reset" value="Reset">
+                    </div>
+                </div>
+
+
+
+            </form>
+
+
+        </div>
+    </main>
+
+    <%-include('./footer.ejs')%>
+
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <script type="text/javaScript" laguage="javaScript" src="/js/job_seeker_reg_form_validation.js">
+         
+    </script>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
